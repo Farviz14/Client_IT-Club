@@ -1,0 +1,51 @@
+/* Edit Profile Picture Box */
+.edit-profile-picture-box {
+    width: 300px;
+    height: 400px;
+    border: 3px solid #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Profile Picture Preview */
+.edit-profile-picture-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Input Fields Styling */
+.edit-form-control,
+.edit.form-select {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.edit-form-control:focus,
+.edit.form-select:focus {
+    border-color: #0ac24d;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+button.btn-success {
+    border: 2px solid #000000;
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button.btn-success:hover {
+    background-color: #218838;
+}

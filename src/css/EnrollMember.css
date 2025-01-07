@@ -40,14 +40,12 @@
     max-width: 150px;
 }
 
-
 .Enroll-Fullname,
 .Enroll-Nickname,
 .Enroll-StudentID,
 .Enroll-Course,
 .Enroll-Year,
-.Enroll-Phonenumber
- {
+.Enroll-Phonenumber {
     border: 2px solid #000000;
     border-radius: 5px;
     padding: 10px;
@@ -55,24 +53,21 @@
     width: 415px;
 }
 
-.Enroll-role{
+.Enroll-role {
     border: 2px solid #000000;
     border-radius: 5px;
     padding: 10px;
     font-size: 16px;
     width: 415px;
-
 }
 
-.Enroll-Email{
+.Enroll-Email {
     border: 2px solid #000000;
     border-radius: 5px;
     padding: 10px;
     font-size: 16px;
     width: 415px;
-
 }
-
 
 .Enroll-Fullname:focus,
 .Enroll-Nickname:focus,
@@ -85,12 +80,7 @@
     border-color: #0ac24d;
     outline: none;
     box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
-
 }
-
-
-
-
 
 /* Adjust the button position */
 .d-flex.justify-content-center {
@@ -111,7 +101,3 @@ button.btn-primary {
 button.btn-primary:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
-
-
-
-

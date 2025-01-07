@@ -11,12 +11,11 @@
     padding: 10px 20px;
 }
 
-/* Navbar Brand Styling */
-.navbar-brand {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
+/* Navbar Logo Styling */
+.navbar-logo {
+    width: 220px;
+    height: auto;
+    display: block;
 }
 
 /* Navbar Links Styling */
@@ -38,6 +37,18 @@
     color: #007bff;
     font-weight: bold;
     border-bottom: 2px solid #007bff;
+}
+
+/* Profile Icon Styling */
+.profile-icon {
+    color: #007bff;
+}
+
+/* Profile Email Styling */
+.profile-email {
+    font-size: 16px;
+    color: #555;
+    margin-right: 20px;
 }
 
 /* Logout Button Styling */

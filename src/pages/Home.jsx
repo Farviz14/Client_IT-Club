@@ -72,7 +72,7 @@ export default function Home() {
         <>
             <Navbar /> {/* Navbar stays visible */}
             <div className="container mt-5">
-                <h2 className="text-center mb-4">Members List</h2>
+                <h2 className="text-center mb-4">Members</h2>
                 <div className="scrollable-container d-flex flex-wrap justify-content-center">
                     {members.map((member) => (
                         <MemberCard

@@ -34,6 +34,7 @@ export default function Login() {
 
             if (response.ok) {
                 localStorage.setItem('token', data.token);
+                localStorage.setItem('email', form.email); // Storing email
                 alert('Login successful!');
                 navigate('/home');
             } else {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar"; // Ensure Navbar is imported
-import "../css/EnrollMember.css";
+import "../css/EnrollMember.css"; // Link your CSS file
 
 export default function EnrollMember() {
     const [form, setForm] = useState({
@@ -61,7 +61,7 @@ export default function EnrollMember() {
             const data = await response.json();
 
             if (response.ok) {
-                setMessage("Member enrolled successfully!");
+                alert("Member enrolled successfully!"); // Keeping the alert message
                 setForm({
                     fullName: "",
                     nickname: "",
@@ -76,10 +76,10 @@ export default function EnrollMember() {
                 });
                 setImageFileName(""); // Reset image file name
             } else {
-                setMessage(data.message);
+                alert(data.message);
             }
         } catch (error) {
-            setMessage("Error: " + error.message);
+            alert("Error: " + error.message);
         }
     }
 
@@ -121,14 +121,13 @@ export default function EnrollMember() {
 
                     {/* Form Section */}
                     <div className="col-md-8">
-                        {message && <div className="alert alert-success">{message}</div>}
                         <form onSubmit={onSubmit}>
                             <div className="row mb-3">
                                 <div className="col-md-6">
                                     <label className="form-label">Full Name</label>
                                     <input
                                         type="text"
-                                        className="form-control"
+                                        className="Enroll-Fullname"
                                         value={form.fullName}
                                         onChange={(e) => updateForm({ fullName: e.target.value })}
                                         required
@@ -138,7 +137,7 @@ export default function EnrollMember() {
                                     <label className="form-label">Nickname</label>
                                     <input
                                         type="text"
-                                        className="form-control"
+                                        className="Enroll-Nickname"
                                         value={form.nickname}
                                         onChange={(e) => updateForm({ nickname: e.target.value })}
                                         required
@@ -150,7 +149,7 @@ export default function EnrollMember() {
                                     <label className="form-label">Student ID</label>
                                     <input
                                         type="text"
-                                        className="form-control"
+                                        className="Enroll-StudentID"
                                         value={form.studentID}
                                         onChange={(e) => updateForm({ studentID: e.target.value })}
                                         required
@@ -159,7 +158,7 @@ export default function EnrollMember() {
                                 <div className="col-md-6">
                                     <label className="form-label">Course</label>
                                     <select
-                                        className="form-select"
+                                        className="Enroll-Course"
                                         value={form.course}
                                         onChange={(e) => updateForm({ course: e.target.value })}
                                         required
@@ -176,7 +175,7 @@ export default function EnrollMember() {
                                 <div className="col-md-6">
                                     <label className="form-label">Year</label>
                                     <select
-                                        className="form-select"
+                                        className="Enroll-Year"
                                         value={form.year}
                                         onChange={(e) => updateForm({ year: e.target.value })}
                                         required
@@ -190,7 +189,7 @@ export default function EnrollMember() {
                                 <div className="col-md-6">
                                     <label className="form-label">Role</label>
                                     <select
-                                        className="form-select"
+                                        className="Enroll-role"
                                         value={form.role}
                                         onChange={(e) => updateForm({ role: e.target.value })}
                                         required
@@ -209,7 +208,7 @@ export default function EnrollMember() {
                                     <label className="form-label">Email</label>
                                     <input
                                         type="email"
-                                        className="form-control"
+                                        className="Enroll-Email"
                                         value={form.email}
                                         onChange={(e) => updateForm({ email: e.target.value })}
                                         required
@@ -219,7 +218,7 @@ export default function EnrollMember() {
                                     <label className="form-label">Phone Number</label>
                                     <input
                                         type="tel"
-                                        className="form-control"
+                                        className="Enroll-Phonenumber"
                                         value={form.phoneNumber}
                                         onChange={(e) => updateForm({ phoneNumber: e.target.value })}
                                         required

@@ -40,21 +40,57 @@
     max-width: 150px;
 }
 
-/* Form Fields Styling with Borders */
-.form-control,
-.form-select {
+
+.Enroll-Fullname,
+.Enroll-Nickname,
+.Enroll-StudentID,
+.Enroll-Course,
+.Enroll-Year,
+.Enroll-Phonenumber
+ {
     border: 2px solid #000000;
     border-radius: 5px;
     padding: 10px;
     font-size: 16px;
+    width: 415px;
 }
 
-.form-control:focus,
-.form-select:focus {
+.Enroll-role{
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 415px;
+
+}
+
+.Enroll-Email{
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 415px;
+
+}
+
+
+.Enroll-Fullname:focus,
+.Enroll-Nickname:focus,
+.Enroll-StudentID:focus,
+.Enroll-Course:focus,
+.Enroll-Year:focus,
+.Enroll-Phonenumber:focus,
+.Enroll-role:focus,
+.Enroll-Email:focus {
     border-color: #0ac24d;
     outline: none;
     box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+
 }
+
+
+
+
 
 /* Adjust the button position */
 .d-flex.justify-content-center {

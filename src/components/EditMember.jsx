@@ -148,7 +148,7 @@ export default function EditMember() {
                                     <label className="form-label">Full Name</label>
                                     <input
                                         type="text"
-                                        className="form-control"
+                                        className="Edit-fullname"
                                         value={form.fullName}
                                         onChange={(e) => updateForm({ fullName: e.target.value })}
                                         required
@@ -158,7 +158,7 @@ export default function EditMember() {
                                     <label className="form-label">Nickname</label>
                                     <input
                                         type="text"
-                                        className="form-control"
+                                        className="Edit-nickname"
                                         value={form.nickname}
                                         onChange={(e) => updateForm({ nickname: e.target.value })}
                                         required
@@ -170,7 +170,7 @@ export default function EditMember() {
                                     <label className="form-label">Student ID</label>
                                     <input
                                         type="text"
-                                        className="form-control"
+                                        className="Edit-studentid"
                                         value={form.studentID}
                                         onChange={(e) => updateForm({ studentID: e.target.value })}
                                         required
@@ -179,7 +179,7 @@ export default function EditMember() {
                                 <div className="col-md-6">
                                     <label className="form-label">Course</label>
                                     <select
-                                        className="form-select"
+                                        className="Edit-course"
                                         value={form.course}
                                         onChange={(e) => updateForm({ course: e.target.value })}
                                         required
@@ -196,7 +196,7 @@ export default function EditMember() {
                                 <div className="col-md-6">
                                     <label className="form-label">Year</label>
                                     <select
-                                        className="form-select"
+                                        className="Edit-year"
                                         value={form.year}
                                         onChange={(e) => updateForm({ year: e.target.value })}
                                         required
@@ -210,7 +210,7 @@ export default function EditMember() {
                                 <div className="col-md-6">
                                     <label className="form-label">Role</label>
                                     <select
-                                        className="form-select"
+                                        className="Edit-role"
                                         value={form.role}
                                         onChange={(e) => updateForm({ role: e.target.value })}
                                         required
@@ -229,7 +229,7 @@ export default function EditMember() {
                                     <label className="form-label">Email</label>
                                     <input
                                         type="email"
-                                        className="form-control"
+                                        className="Edit-email"
                                         value={form.email}
                                         onChange={(e) => updateForm({ email: e.target.value })}
                                         required
@@ -239,7 +239,7 @@ export default function EditMember() {
                                     <label className="form-label">Phone Number</label>
                                     <input
                                         type="tel"
-                                        className="form-control"
+                                        className="Edit-phonenumber"
                                         value={form.phoneNumber}
                                         onChange={(e) => updateForm({ phoneNumber: e.target.value })}
                                         required

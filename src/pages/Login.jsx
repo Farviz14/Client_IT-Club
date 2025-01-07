@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import '../css/Login.css'; // Correct path to the CSS file
+import logo from '../images/Logo.png'; // Import the logo image
 
 export default function Login() {
     const [form, setForm] = useState({ email: '', password: '' });
-    const [message, setMessage] = useState(""); // Added state for feedback message
     const navigate = useNavigate();
 
     // Function to update form state
@@ -33,30 +34,31 @@ export default function Login() {
 
             if (response.ok) {
                 localStorage.setItem('token', data.token);
-                setMessage("Login successful!");
-                setTimeout(() => {
-                    navigate('/home');
-                }, 2000); // Redirect after 2 seconds
+                alert('Login successful!');
+                navigate('/home');
             } else {
-                setMessage(data.message); // Show error message
+                alert(data.message);
             }
         } catch (error) {
-            setMessage('Error: ' + error.message);
+            alert('Error: ' + error.message);
         }
 
         setForm({ email: '', password: '' });
     }
 
     return (
-        <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
-            <div className="card p-4 shadow-sm" style={{ width: '24rem' }}>
-                <h2 className="text-center mb-4">Login</h2>
+        <div className="login-page">
+            <div className="login-card">
+                {/* Logo at the top of the login card */}
+                <div className="logo-container">
+                    <img src={logo} alt="Temasek Polytechnic Logo" className="login-logo" />
+                </div>
                 <form onSubmit={onSubmit}>
                     <div className="mb-3">
-                        <label htmlFor="email" className="form-label">Email address</label>
+                        <label htmlFor="email" className="login-email-label">Email address</label>
                         <input
                             type="email"
-                            className="form-control"
+                            className="login-email"
                             id="email"
                             value={form.email}
                             onChange={(e) => updateForm({ email: e.target.value })}
@@ -65,16 +67,22 @@ export default function Login() {
                         />
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="password" className="form-label">Password</label>
+                        <label htmlFor="password" className="login-password-label">Password</label>
                         <input
                             type="password"
-                            className="form-control"
+                            className="login-password"
                             id="password"
                             value={form.password}
                             onChange={(e) => updateForm({ password: e.target.value })}
                             placeholder="Enter your password"
                             required
                         />
+                        {/* Forget Password Link */}
+                        <div className="text-end mt-2">
+                            <Link to="/forget-password" className="forget-password-disabled">
+                                Forgot Password?
+                            </Link>
+                        </div>
                     </div>
                     <div className="d-grid mb-3">
                         <button type="submit" className="btn btn-primary">Login</button>
@@ -84,11 +92,6 @@ export default function Login() {
                             Register (Admins Only)
                         </Link>
                     </div>
-                    {message && (
-                        <div className={`mt-3 text-center ${message.includes("successful") ? "text-success" : "text-danger"}`}>
-                            {message}
-                        </div>
-                    )}
                 </form>
             </div>
         </div>

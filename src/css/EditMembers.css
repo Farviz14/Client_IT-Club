@@ -21,16 +21,29 @@
 }
 
 /* Input Fields Styling */
-.edit-form-control,
-.edit.form-select {
+.Edit-fullname,
+.Edit-nickname,
+.Edit-studentid,
+.Edit-course,
+.Edit-year,
+.Edit-role,
+.Edit-email,
+.Edit-phonenumber{
     border: 2px solid #000000;
     border-radius: 5px;
     padding: 10px;
     font-size: 16px;
+    width: 415px;
 }
 
-.edit-form-control:focus,
-.edit.form-select:focus {
+.Edit-fullname:focus,
+.Edit-nickname:focus,
+.Edit-studentid:focus,
+.Edit-course:focus,
+.Edit-year:focus,
+.Edit-role:focus,
+.Edit-email:focus,
+.Edit-phonenumber:focus{
     border-color: #0ac24d;
     outline: none;
     box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import Navbar from "../components/Navbar"; // Importing Navbar
 import MemberCard from "../components/MemberCard";
+import "../css/MemberCard.css"; // Ensure the CSS is linked
+
 
 export default function Home() {
     const [members, setMembers] = useState([]);
@@ -71,7 +73,7 @@ export default function Home() {
             <Navbar /> {/* Navbar stays visible */}
             <div className="container mt-5">
                 <h2 className="text-center mb-4">Members List</h2>
-                <div className="d-flex flex-wrap justify-content-center">
+                <div className="scrollable-container d-flex flex-wrap justify-content-center">
                     {members.map((member) => (
                         <MemberCard
                             key={member._id}

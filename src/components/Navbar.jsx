@@ -1,4 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
+import "../css/NavBar.css"; // Import the CSS file
 
 function Navbar() {
     const navigate = useNavigate();
@@ -29,12 +30,20 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav me-auto">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/home">
+                            <NavLink
+                                className="nav-link"
+                                to="/home"
+                                activeClassName="active"
+                            >
                                 Home
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/enroll">
+                            <NavLink
+                                className="nav-link"
+                                to="/enroll"
+                                activeClassName="active"
+                            >
                                 Enroll Member
                             </NavLink>
                         </li>

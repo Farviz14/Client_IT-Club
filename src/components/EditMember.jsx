@@ -40,10 +40,11 @@ export default function EditMember() {
                 setForm(data.data);
                 setImageFileName("Image loaded"); // Show that the image is loaded
             } else {
-                setMessage("Failed to load member data.");
+                alert("Failed to load member data.");
             }
         } catch (error) {
             console.error("Error fetching member data:", error);
+            alert("Error fetching member data.");
         }
     };
 
@@ -95,11 +96,11 @@ export default function EditMember() {
                 alert("Member updated successfully!");
                 navigate("/home"); // Navigate back to the home page
             } else {
-                setMessage(data.message || "Error updating member");
+                alert(data.message || "Error updating member");
             }
         } catch (error) {
             console.error("Error updating member:", error);
-            setMessage("Error updating member");
+            alert("Error updating member. Please try again.");
         }
     }
 

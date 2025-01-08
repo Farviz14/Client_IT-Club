@@ -102,7 +102,7 @@ export default function EnrollMember() {
                                     className="profile-picture-preview"
                                 />
                             ) : (
-                                <span>No Image Selected</span>
+                                <span>Click To Add</span>
                             )}
                         </div>
                         <input
@@ -124,7 +124,7 @@ export default function EnrollMember() {
                         <form onSubmit={onSubmit}>
                             <div className="row mb-3">
                                 <div className="col-md-6">
-                                    <label className="form-label">Full Name</label>
+                                    <label className="Enroll-label-fullname">Full Name</label>
                                     <input
                                         type="text"
                                         className="Enroll-Fullname"
@@ -134,7 +134,7 @@ export default function EnrollMember() {
                                     />
                                 </div>
                                 <div className="col-md-6">
-                                    <label className="form-label">Nickname</label>
+                                    <label className="Enroll-label-nickname">Nickname</label>
                                     <input
                                         type="text"
                                         className="Enroll-Nickname"
@@ -146,7 +146,7 @@ export default function EnrollMember() {
                             </div>
                             <div className="row mb-3">
                                 <div className="col-md-6">
-                                    <label className="form-label">Student ID</label>
+                                    <label className="Enroll-label-studentid">Student ID</label>
                                     <input
                                         type="text"
                                         className="Enroll-StudentID"
@@ -156,7 +156,7 @@ export default function EnrollMember() {
                                     />
                                 </div>
                                 <div className="col-md-6">
-                                    <label className="form-label">Course</label>
+                                    <label className="Enroll-label-course">Course</label>
                                     <select
                                         className="Enroll-Course"
                                         value={form.course}
@@ -173,7 +173,7 @@ export default function EnrollMember() {
                             </div>
                             <div className="row mb-3">
                                 <div className="col-md-6">
-                                    <label className="form-label">Year</label>
+                                    <label className="Enroll-label-year">Year</label>
                                     <select
                                         className="Enroll-Year"
                                         value={form.year}
@@ -187,7 +187,7 @@ export default function EnrollMember() {
                                     </select>
                                 </div>
                                 <div className="col-md-6">
-                                    <label className="form-label">Role</label>
+                                    <label className="Enroll-label-role">Role</label>
                                     <select
                                         className="Enroll-role"
                                         value={form.role}
@@ -205,7 +205,7 @@ export default function EnrollMember() {
                             </div>
                             <div className="row mb-3">
                                 <div className="col-md-6">
-                                    <label className="form-label">Email</label>
+                                    <label className="Enroll-label-email">Email</label>
                                     <input
                                         type="email"
                                         className="Enroll-Email"
@@ -215,7 +215,7 @@ export default function EnrollMember() {
                                     />
                                 </div>
                                 <div className="col-md-6">
-                                    <label className="form-label">Phone Number</label>
+                                    <label className="Enroll-label-phonenumber">Phone Number</label>
                                     <input
                                         type="tel"
                                         className="Enroll-Phonenumber"

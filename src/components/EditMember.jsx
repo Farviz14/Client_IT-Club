@@ -132,7 +132,7 @@ export default function EditMember() {
                             style={{ display: "none" }}
                             onChange={handleImageUpload}
                         />
-                        <div className="edit-profile-picture-text">Profile Picture</div>
+                        <div className="edit-profile-picture-text">Click To Change</div>
                         {imageFileName && (
                             <div className="edit-image-filename" title={imageFileName}>
                                 {imageFileName}
@@ -145,7 +145,7 @@ export default function EditMember() {
                         <form onSubmit={onSubmit}>
                             <div className="row mb-3">
                                 <div className="col-md-6">
-                                    <label className="form-label">Full Name</label>
+                                    <label className="Edit-label-fullname">Full Name</label>
                                     <input
                                         type="text"
                                         className="Edit-fullname"
@@ -155,7 +155,7 @@ export default function EditMember() {
                                     />
                                 </div>
                                 <div className="col-md-6">
-                                    <label className="form-label">Nickname</label>
+                                    <label className="Edit-label-nickname">Nickname</label>
                                     <input
                                         type="text"
                                         className="Edit-nickname"
@@ -167,7 +167,7 @@ export default function EditMember() {
                             </div>
                             <div className="row mb-3">
                                 <div className="col-md-6">
-                                    <label className="form-label">Student ID</label>
+                                    <label className="Edit-label-studentid">Student ID</label>
                                     <input
                                         type="text"
                                         className="Edit-studentid"
@@ -177,7 +177,7 @@ export default function EditMember() {
                                     />
                                 </div>
                                 <div className="col-md-6">
-                                    <label className="form-label">Course</label>
+                                    <label className="Edit-label-course">Course</label>
                                     <select
                                         className="Edit-course"
                                         value={form.course}
@@ -194,7 +194,7 @@ export default function EditMember() {
                             </div>
                             <div className="row mb-3">
                                 <div className="col-md-6">
-                                    <label className="form-label">Year</label>
+                                    <label className="Edit-label-year">Year</label>
                                     <select
                                         className="Edit-year"
                                         value={form.year}
@@ -208,7 +208,7 @@ export default function EditMember() {
                                     </select>
                                 </div>
                                 <div className="col-md-6">
-                                    <label className="form-label">Role</label>
+                                    <label className="Edit-label-role">Role</label>
                                     <select
                                         className="Edit-role"
                                         value={form.role}
@@ -226,7 +226,7 @@ export default function EditMember() {
                             </div>
                             <div className="row mb-3">
                                 <div className="col-md-6">
-                                    <label className="form-label">Email</label>
+                                    <label className="Edit-label-email">Email</label>
                                     <input
                                         type="email"
                                         className="Edit-email"
@@ -236,7 +236,7 @@ export default function EditMember() {
                                     />
                                 </div>
                                 <div className="col-md-6">
-                                    <label className="form-label">Phone Number</label>
+                                    <label className="Edit-label-phonenumber">Phone Number</label>
                                     <input
                                         type="tel"
                                         className="Edit-phonenumber"

@@ -29,6 +29,7 @@
 
 .profile-picture-text {
     margin-top: 10px;
+    font-weight: bold;
 }
 
 .image-filename {
@@ -100,4 +101,17 @@ button.btn-primary {
 /* Button Hover Effect */
 button.btn-primary:hover {
     background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+.Enroll-label-fullname,
+.Enroll-label-nickname,
+.Enroll-label-studentid,
+.Enroll-label-course,
+.Enroll-label-year,
+.Enroll-label-phonenumber,
+.Enroll-label-role,
+.Enroll-label-email {
+    font-weight: bold;
+
 }

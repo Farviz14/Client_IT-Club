@@ -62,3 +62,21 @@ button.btn-success {
 button.btn-success:hover {
     background-color: #218838;
 }
+
+
+.Edit-label-fullname,
+.Edit-label-nickname,
+.Edit-label-studentid,
+.Edit-label-course,
+.Edit-label-year,
+.Edit-label-phonenumber,
+.Edit-label-role,
+.Edit-label-email {
+    font-weight: bold;
+
+}
+
+.edit-profile-picture-text {
+    margin-top: 10px;
+    font-weight: bold;
+}

@@ -56,7 +56,7 @@ export default function EditMember() {
         }));
     }
 
-    // Function to handle image upload and convert to Base64 with preview
+    // Function to handle image upload and convert to Base64 string with image preview
     function handleImageUpload(e) {
         const file = e.target.files[0];
         setImageFileName(file ? file.name : ""); // Set file name

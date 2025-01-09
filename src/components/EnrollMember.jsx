@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import Navbar from "../components/Navbar"; // Ensure Navbar is imported
 import "../css/EnrollMember.css"; // Link your CSS file
 
@@ -18,6 +19,8 @@ export default function EnrollMember() {
 
     const [imageFileName, setImageFileName] = useState(""); // Track image file name
     const [message, setMessage] = useState("");
+
+    const navigate = useNavigate(); // Initialize useNavigate
 
     // Function to handle form updates
     function updateForm(value) {
@@ -75,6 +78,7 @@ export default function EnrollMember() {
                     dateJoined: new Date().toISOString().split("T")[0],
                 });
                 setImageFileName(""); // Reset image file name
+                navigate("/home"); // Navigate to home page after success
             } else {
                 alert(data.message);
             }

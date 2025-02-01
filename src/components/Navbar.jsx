@@ -53,9 +53,13 @@ function Navbar() {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <span className="nav-link disabled">
+                            <NavLink
+                                className="nav-link"
+                                to="/attendance"
+                                activeClassName="active"
+                            >
                                 Attendance
-                            </span>
+                            </NavLink>
                         </li>
                     </ul>
 

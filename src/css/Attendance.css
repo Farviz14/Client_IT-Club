@@ -1,0 +1,113 @@
+/* General Container */
+.attendance-container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Attendance Info Bar */
+.attendance-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffffed;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.attendance-submit-btn,
+.view-attendance-btn {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 65px;
+}
+
+.attendance-submit-btn{
+    margin-right: 10px;
+}
+
+
+.legend {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 10px;  /* Add space between the elements */
+
+}
+
+.present { background: #28a745; color: white; }
+.absent { background: #dc3545; color: white; }
+.valid-reason { background: #ffc107; color: black; }
+
+
+.attendance-heading{
+    color: white;
+}
+
+/* Fixed Table Header */
+.attendance-table-header {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #007bff;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    table-layout: fixed;
+}
+
+.attendance-table-header th {
+    text-align: center;
+    padding: 12px;  /* Adjusted for better spacing */
+    border: 1px solid #000000;
+    width: calc(100% / 6);
+}
+
+/* Make P, A, and VR header colors match */
+.attendance-table-header .attendance-present {
+    background-color: #28a745;
+}
+.attendance-table-header .attendance-absent {
+    background-color: #dc3545;
+}
+.attendance-table-header .attendance-valid-reason {
+    background-color: #ffc107;
+}
+
+/* Adjust P, A, VR Column Width */
+.attendance-table-header th:nth-child(4),
+.attendance-table-header th:nth-child(5),
+.attendance-table-header th:nth-child(6){
+    width: 75px;
+    min-width: 75px;
+    max-width: 75px;
+}
+
+/* Scrollable Table */
+.attendance-table-container {
+    height: 475px;
+    overflow-y: auto;
+    overflow-x: hidden; /* Hide horizontal scroll */
+    width: calc(100% + 15px); /* Adjust to compensate for hidden scrollbar */
+    margin-top: 0px;  /* Added space between header and table */
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    table-layout: fixed;
+}
+
+.attendance-table td {
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #000000;
+}

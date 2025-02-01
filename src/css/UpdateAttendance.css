@@ -1,0 +1,122 @@
+/* ✅ Container */
+.update-attendance-container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ✅ Top Info Section */
+.update-attendance-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffffed;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* ✅ Legends */
+.update-legend {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.present {
+    background: #28a745;
+    color: white;
+}
+
+.absent {
+    background: #dc3545;
+    color: white;
+}
+
+.valid-reason {
+    background: #ffc107;
+    color: black;
+}
+
+/* ✅ Dropdown */
+.update-attendance-session-dropdown {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid #000000;
+    margin-top: 15px;
+}
+
+/* ✅ Buttons */
+.update-attendance-btn, .update-back-btn {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 115px;
+}
+
+.update-attendance-btn {
+    margin-right: 10px;
+}
+
+/* ✅ Table */
+.update-attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    table-layout: fixed;
+}
+
+.update-attendance-table th,
+.update-attendance-table td {
+    text-align: center;
+    padding: 12px;
+    border: 1px solid black;
+}
+
+/* ✅ Header Row Background Colors */
+.present-header {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.absent-header {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.valid-reason-header {
+    background-color: #ffc107; /* Yellow */
+    color: black;
+}
+
+.name-column {
+    background-color: #007bff; 
+    color: white;
+}
+
+/* ✅ Table Header Styling */
+.update-attendance-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* ✅ Ensuring Only Table Body is Scrollable */
+.update-attendance-table-container {
+    max-height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* ✅ Enlarged Radio Buttons */
+.update-attendance-table input {
+    transform: scale(1.2);
+}

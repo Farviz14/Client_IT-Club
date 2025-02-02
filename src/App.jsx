@@ -7,6 +7,8 @@ import EditMember from "./components/EditMember"; // Import the EditMember compo
 import MemberHome from "./pages/MemberHome"; // Import the MemberHome component
 import Attendance from "./components/Attendance";
 import UpdateAttendance from "./components/UpdateAttendance";
+import AdminCalendar from "./components/AdminCalendar";
+import MemberCalendar from "./components/MemberCalendar";
 
 
 function App() {
@@ -20,10 +22,12 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/home" element={<Home />} />
             <Route path="/enroll" element={<EnrollMember />} />
-            <Route path="/edit/:id" element={<EditMember />} /> {/* Edit Route Added */}
-            <Route path="/member-home" element={<MemberHome />} /> {/* Member Home Route */}
-            <Route path="/attendance" element={<Attendance />} /> {/* Member Home Route */}
+            <Route path="/edit/:id" element={<EditMember />} /> 
+            <Route path="/member-home" element={<MemberHome />} /> 
+            <Route path="/attendance" element={<Attendance />} /> 
             <Route path="/update-attendance" element={<UpdateAttendance />} />
+            <Route path="/calendar-admin" element={<AdminCalendar />} />
+            <Route path="/event-calendar" element={<MemberCalendar />} />
 
 
         </Routes>

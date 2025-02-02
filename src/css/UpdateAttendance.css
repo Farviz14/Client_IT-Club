@@ -53,9 +53,9 @@
 
 /* ✅ Buttons */
 .update-attendance-btn, .update-back-btn {
-    background: rgb(0, 0, 0);
+    background: #007bff;
     color: rgb(255, 255, 255);
-    border: 1px solid white;
+    border: 2px solid rgb(0, 0, 0);
     padding: 7px 12px;
     border-radius: 5px;
     cursor: pointer;

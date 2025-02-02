@@ -27,7 +27,6 @@ function MemberNavbar() {
                             <NavLink
                                 className="nav-link"
                                 to="/member-home"
-                                activeClassName="active"
                             >
                                 Home
                             </NavLink>
@@ -36,7 +35,6 @@ function MemberNavbar() {
                             <NavLink
                                 className="nav-link"
                                 to="/event-calendar"
-                                activeClassName="active"
                             >
                                 Event Calendar
                             </NavLink>

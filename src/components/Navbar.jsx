@@ -38,7 +38,6 @@ function Navbar() {
                             <NavLink
                                 className="nav-link"
                                 to="/home"
-                                activeClassName="active"
                             >
                                 Home
                             </NavLink>
@@ -47,7 +46,6 @@ function Navbar() {
                             <NavLink
                                 className="nav-link"
                                 to="/enroll"
-                                activeClassName="active"
                             >
                                 Enroll Member
                             </NavLink>
@@ -56,9 +54,16 @@ function Navbar() {
                             <NavLink
                                 className="nav-link"
                                 to="/attendance"
-                                activeClassName="active"
                             >
                                 Attendance
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink
+                                className="nav-link"
+                                to="/calendar-admin"
+                            >
+                                Event Calendar
                             </NavLink>
                         </li>
                     </ul>

@@ -92,7 +92,7 @@
 
 /* Scrollable Table */
 .attendance-table-container {
-    height: 475px;
+    height: 470px;
     overflow-y: auto;
     overflow-x: hidden; /* Hide horizontal scroll */
     width: calc(100% + 15px); /* Adjust to compensate for hidden scrollbar */

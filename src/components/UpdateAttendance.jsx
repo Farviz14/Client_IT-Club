@@ -100,6 +100,8 @@ export default function UpdateAttendance() {
             const data = await response.json();
             if (response.ok) {
                 alert("Attendance updated successfully!");
+                navigate("/attendance");
+
             } else {
                 alert(data.message);
             }

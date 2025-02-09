@@ -24,17 +24,28 @@ export default function Attendance() {
                 const membersData = await membersResponse.json();
                 setMembers(membersData.data);
 
+                // ✅ Set default attendance to "P" for all members
                 const initialAttendance = {};
                 membersData.data.forEach(member => {
-                    initialAttendance[member._id] = "";
+                    initialAttendance[member._id] = "P"; // Default to Present
                 });
                 setAttendance(initialAttendance);
 
+                // ✅ Check if attendance already exists for today
                 const attendanceResponse = await fetch(`http://localhost:5050/attendance/date/${todayDate}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
+
                 if (attendanceResponse.ok) {
+                    const existingData = await attendanceResponse.json();
                     setAttendanceExists(true);
+
+                    // ✅ If attendance already exists, update with existing records
+                    const updatedAttendance = { ...initialAttendance };
+                    existingData.data.records.forEach(record => {
+                        updatedAttendance[record.memberId] = record.status;
+                    });
+                    setAttendance(updatedAttendance);
                 }
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -102,7 +113,9 @@ export default function Attendance() {
                         <span className="legend valid-reason">VR - Valid Reason</span>
                     </div>
                     <div className="info-right">
-                        <button type="submit" className="attendance-submit-btn" onClick={submitAttendance} disabled={attendanceExists}>{attendanceExists ? "Attendance Taken" : "Submit Attendance"}</button>
+                        <button type="submit" className="attendance-submit-btn" onClick={submitAttendance} disabled={attendanceExists}>
+                            {attendanceExists ? "Attendance Taken" : "Submit Attendance"}
+                        </button>
                         <button className="view-attendance-btn" onClick={() => navigate("/update-attendance")}>View all attendance</button>
                     </div>
                 </div>
@@ -130,13 +143,31 @@ export default function Attendance() {
                                         <td>{member.year}</td>
                                         <td>{member.course}</td>
                                         <td>
-                                            <input type="radio" name={member._id} value="P" checked={attendance[member._id] === "P"} onChange={() => handleAttendanceChange(member._id, "P")} disabled={attendanceExists} />
+                                            <input type="radio" 
+                                                name={member._id} 
+                                                value="P" 
+                                                checked={attendance[member._id] === "P"} 
+                                                onChange={() => handleAttendanceChange(member._id, "P")} 
+                                                disabled={attendanceExists} 
+                                            />
                                         </td>
                                         <td>
-                                            <input type="radio" name={member._id} value="A" checked={attendance[member._id] === "A"} onChange={() => handleAttendanceChange(member._id, "A")} disabled={attendanceExists} />
+                                            <input type="radio" 
+                                                name={member._id} 
+                                                value="A" 
+                                                checked={attendance[member._id] === "A"} 
+                                                onChange={() => handleAttendanceChange(member._id, "A")} 
+                                                disabled={attendanceExists} 
+                                            />
                                         </td>
                                         <td>
-                                            <input type="radio" name={member._id} value="VR" checked={attendance[member._id] === "VR"} onChange={() => handleAttendanceChange(member._id, "VR")} disabled={attendanceExists} />
+                                            <input type="radio" 
+                                                name={member._id} 
+                                                value="VR" 
+                                                checked={attendance[member._id] === "VR"} 
+                                                onChange={() => handleAttendanceChange(member._id, "VR")} 
+                                                disabled={attendanceExists} 
+                                            />
                                         </td>
                                     </tr>
                                 ))}

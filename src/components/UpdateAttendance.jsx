@@ -9,7 +9,7 @@ export default function UpdateAttendance() {
     const [attendanceRecords, setAttendanceRecords] = useState([]);
     const [members, setMembers] = useState([]);
     const navigate = useNavigate();
-    const todayDate = new Date().toISOString().split("T")[0];
+    const todayDate = formatDate(new Date());
 
     useEffect(() => {
         async function fetchSessions() {
@@ -22,10 +22,11 @@ export default function UpdateAttendance() {
                 if (response.ok) {
                     setSessions(data.data);
 
-                    // ✅ Automatically select the latest session
+                    // ✅ Automatically select the latest session and format it properly
                     if (data.data.length > 0) {
-                        const latestSession = data.data[data.data.length - 1].sessionDate;
+                        const latestSession = formatDate(data.data[data.data.length - 1].sessionDate);
                         fetchAttendance(latestSession);
+                        setSelectedDate(latestSession); // ✅ Set the dropdown default
                     }
                 } else {
                     alert(data.message);
@@ -112,6 +113,12 @@ export default function UpdateAttendance() {
         return member ? member.fullName : "Unknown";
     }
 
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        if (isNaN(date)) return ""; // Handle invalid dates
+        return date.toISOString().split("T")[0]; // ✅ Returns "YYYY-MM-DD"
+    }
+
     return (
         <>
             <Navbar />
@@ -124,14 +131,16 @@ export default function UpdateAttendance() {
                         <span className="update-legend absent">A - Absent</span>
                         <span className="update-legend valid-reason">VR - Valid Reason</span>
                         <br />
+                        <label><strong>Select Attendance Date</strong></label>
+                        <span>  </span>
                         <select
                             className="update-attendance-session-dropdown"
+                            value={selectedDate} // ✅ Now selects latest session automatically
                             onChange={(e) => fetchAttendance(e.target.value)}
                         >
-                            <option value="">Select Attendance Date</option>
                             {sessions.map((session, index) => (
-                                <option key={index} value={session.sessionDate}>
-                                    {new Date(session.sessionDate).toDateString()}
+                                <option key={index} value={formatDate(session.sessionDate)}>
+                                    {formatDate(session.sessionDate)} {/* ✅ Displays YYYY-MM-DD */}
                                 </option>
                             ))}
                         </select>

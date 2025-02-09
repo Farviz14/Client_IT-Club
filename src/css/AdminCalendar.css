@@ -26,7 +26,7 @@
 .event-legend {
     display: flex;
     gap: 15px;
-    margin-right: 790px;
+    margin-left: 790px;
 }
 
 .legend-item {

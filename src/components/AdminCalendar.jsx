@@ -56,9 +56,19 @@ export default function AdminCalendar() {
     }
 
     function handleDateSelect(info) {
+        const selectedDate = new Date(info.startStr);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Reset time to compare only dates
+    
+        if (selectedDate < today) {
+            alert("This is a past date, you cannot add an event.");
+            return;
+        }
+    
         setEventData({ title: "", date: info.startStr, venue: "", description: "", type: "Engagement" });
         setShowAddModal(true);
     }
+    
 
     async function handleEventClick(info) {
         const eventId = info.event.id;
@@ -172,9 +182,6 @@ export default function AdminCalendar() {
                         <span className="legend-item engagement">Engagement</span>
                         <span className="legend-item meeting">Meeting</span>
                     </div>
-                    <button className="add-event-btn" onClick={() => setShowAddModal(true)}>
-                        + Add Event
-                    </button>
                 </div>
 
                 <div className="calendar-wrapper">
@@ -189,7 +196,7 @@ export default function AdminCalendar() {
                     />
                 </div>
 
-                {/* ✅ Add Event Modal */}
+                {/* Add Event Modal */}
                 {showAddModal && (
                     <div className="overlay">
                         <div className="event-dialog">
@@ -215,7 +222,7 @@ export default function AdminCalendar() {
                     </div>
                 )}
 
-                {/* ✅ Edit/Delete Event Modal */}
+                {/*  Edit/Delete Event Modal */}
                 {showEditModal && (
                     <div className="overlay">
                         <div className="edit-event-dialog">
